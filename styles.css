@@ -1,0 +1,93 @@
+body {
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f7f7f7;
+}
+
+h2 {
+    color: #333;
+}
+
+.game-board {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Endret til 3 kolonner og bruker 1fr for like bredde */
+    grid-gap: 5px;
+    width: 150px; /* Total bredde av rutenettet */
+    margin-top: 20px;
+}
+
+.game-board div {
+    background-color: #8f8f8f;
+    border: 1px solid #333;
+    width: 100%; /* Bredden vil nå være basert på grid layout */
+    padding-top: 100%; /* Padding-top gir en kvadratisk celle basert på bredden */
+    position: relative;
+    cursor: pointer;
+}
+
+.game-board div::before {
+    content: '';
+    display: block;
+}
+
+.game-board div.revealed {
+    background-color: #bdbdbd;
+}
+
+.game-board div.mine {
+    background-color: #d24d57;
+}
+
+.win-message {
+    text-align: center;
+    padding: 10px;
+    margin-top: 20px;
+    border: 1px solid #333;
+    background-color: #dff0d8;
+}
+body {
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f7f7f7;
+}
+
+h2 {
+    color: #333;
+}
+
+.game-board {
+    display: grid;
+    grid-template-columns: repeat(3, 50px); /* 3 kolonner, hver 50px bred */
+    grid-gap: 5px; /* Mellomrom mellom cellene */
+    margin-top: 20px;
+}
+
+.game-board div {
+    background-color: #8f8f8f;
+    border: 1px solid #333;
+    width: 50px; /* Bredde av cellen */
+    height: 50px; /* Høyde av cellen, nå identisk med bredden for å lage en kvadrat */
+    display: flex; /* Bruker flexbox for å midtstille innhold */
+    justify-content: center; /* Sentrerer innhold horisontalt */
+    align-items: center; /* Sentrerer innhold vertikalt */
+    cursor: pointer;
+    font-size: 1.5em; /* Juster etter behov */
+}
+
+.game-board div.revealed {
+    background-color: #bdbdbd;
+}
+
+.game-board div.mine {
+    background-color: #d24d57;
+}
